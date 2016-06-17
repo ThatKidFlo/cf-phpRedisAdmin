@@ -1,0 +1,10 @@
+applications:
+  - name: predix-fm-redis-fmdev
+    buildpack: php_buildpack
+    stack: cflinuxfs2
+    memory: 128M
+    instances: '1'
+    services:
+      - predix_redis_fmdev
+    env:
+      REDIS_NAME: redis-1

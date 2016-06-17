@@ -1,5 +1,9 @@
 <?php
-require dirname(__FILE__) . '/../vendor/autoload.php';
+
+// $vendorDir = getenv('COMPOSER_VENDOR_DIR') != null ? getenv('COMPOSER_VENDOR_DIR') : '..'
+$vendorDir = '/../../lib/vendor';
+
+require dirname(__FILE__) . $vendorDir . '/autoload.php';
 
 define('PHPREDIS_ADMIN_PATH', dirname(__DIR__));
 
@@ -56,7 +60,7 @@ $server['id']      = $i;
 $server['charset'] = isset($server['charset']) && $server['charset'] ? $server['charset'] : false;
 
 
-mb_internal_encoding('utf-8');
+// mb_internal_encoding('utf-8');
 
 
 if (isset($login, $login['servers'])) {
