@@ -1,7 +1,7 @@
 <?php
 //Copy this file to config.inc.php and make changes to that file to customize your configuration.
 
-$redisName = getenv('REDIS_NAME') != null ? getenv('REDIS_NAME') : 'redis-1';
+$redisName = getenv('REDIS') != null ? getenv('REDIS') : 'redis-1';
 
 if (getenv('VCAP_SERVICES') != null) {
   $vcapServices = json_decode(getenv('VCAP_SERVICES'), true);
